@@ -1,23 +1,33 @@
+@use "../core/mediaQueries" as mq;
+
 @import "../core/typography";
 
 .footer {
-    position: fixed;
+    // If a page does not fill the whole height, maybe ill need to change this to fixed
+    position: relative;
     bottom: 0;
     width: 100%;
-    height: 5.875rem;
+    height: 9.4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
+    gap: 1.5rem;
     padding: 0 5% 0 5%;
     background-color: $lightest-grey;
+
+    @include mq.desktop {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 8rem;
+    }
 
     &__copyright {
         display: inline-block;
         font-family: $roboto-font;
         font-weight: 700;
-        font-size: 1rem;
-        line-height: 1.17rem;
+        font-size: 1.6rem;
+        line-height: 1.875rem;
         color: $black;
         text-decoration: none;
     }
@@ -26,8 +36,8 @@
         text-decoration: none;
         font-family: $roboto-font;
         font-weight: 700;
-        font-size: 1rem;
-        line-height: 1.17rem;
+        font-size: 1.6rem;
+        line-height: 1.875rem;
         color: $black;
 
     }
