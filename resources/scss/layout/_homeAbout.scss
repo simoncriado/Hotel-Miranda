@@ -9,7 +9,8 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
-        margin: 15rem 0;
+        margin: 15rem auto 10rem auto;
+        max-width: 60%;
     }
 
     &__info {
@@ -20,11 +21,13 @@
             flex-direction: column;
             flex: 1;
             padding-left: 7rem;
-            padding-right: 15%;
+            padding-right: 5%;
+            // padding-right: 5rem;
             margin-top: 15rem;
         }
 
         &--subtitle {
+            width: fit-content;
             margin-top: 6rem;
             padding: 3rem 1rem 0 2rem;
             font-family: $archivo-font;
@@ -37,6 +40,7 @@
         }
 
         &--title {
+            width: fit-content;
             padding: 2.5rem 1rem 0 2rem;
             font-family: $standard-tt-font;
             font-style: normal;
@@ -48,6 +52,7 @@
         }
 
         &--paragraph {
+            width: fit-content;
             padding: 1.4rem 2rem 0 2rem;
             font-family: $archivo-font;
             font-style: normal;
@@ -79,7 +84,7 @@
             display: flex;
             flex-direction: row;
             flex: 1;
-            padding-left: 15%;
+            padding-left: 5%;
         }
 
         &__team {

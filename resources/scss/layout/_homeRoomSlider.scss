@@ -7,6 +7,7 @@
 .roomSlider {
     text-align: center;
     margin-top: 6rem;
+    max-width: 100%;
 
     &__subtitle {
         font-family: $archivo-font;
@@ -15,7 +16,7 @@
         font-size: 1.4rem;
         line-height: 1.5rem;
         letter-spacing: 0.28rem;
-        color: $light-grey
+        color: $light-grey;
     }
 
     &__title {
@@ -29,24 +30,66 @@
         color: #222222;
     }
 
-    &__slides {
+    &__slides,
+    .swiper {
         position: relative;
-        padding-top: 4.4rem;
         max-width: 100%;
-        overflow: hidden;
+        padding-top: 4.4rem;
+        height: fit-content;
+
+        &-button-prev,
+        &-button-next {
+            user-select: none;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 17rem;
+            width: 3.2rem;
+            height: 3.2rem;
+            z-index: 99;
+            background-color: $white;
+            font-size: 1rem;
+            color: $black;
+            font-weight: 700;
+            cursor: pointer;
+
+            &:after {
+                font-size: 1rem;
+            }
+
+            &:hover {
+                background-color: $gold;
+                color: $white;
+            }
+        }
+
+        &-button-prev {
+            left: 1rem;
+            right: auto;
+        }
+
+        &-button-next {
+            right: 1rem;
+            left: auto;
+        }
 
         &--extras {
             position: absolute;
-            // width: 80%;
-            // height: 8rem;
-            left: 12.5%;
-            top: 1rem;
+            width: 30rem;
+            height: 8rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: -3.5rem;
+            z-index: 10;
         }
 
         &--roomImg {
             width: 100%;
             height: 25rem;
             object-fit: cover;
+            max-width: 100%;
         }
 
         &--title {
@@ -72,7 +115,7 @@
             font-weight: 400;
             font-size: 1.4rem;
             line-height: 2.4rem;
-            color: $light-grey
+            color: $light-grey;
         }
 
         &--price {
