@@ -8,7 +8,22 @@
     position: relative;
     max-width: 100%;
     overflow: hidden;
-    padding: 18rem 2rem 12rem 2rem;
+    padding: 18rem 2rem 0 2rem;
+
+    @include mq.desktop {
+        width: 70%;
+        margin: auto;
+        overflow: visible;
+        scale: (1);
+    }
+
+    // Some magic happening here: for the food icon to override the overflow hidden from the parent (it has to be hidden otherwise the swiper does not work) I had to wrap everything in
+    // another div and add the scale 1 property to the div above the new wrapper
+    .wrapper {
+        @include mq.desktop {
+            overflow: hidden;
+        }
+    }
 
     &__icon {
         position: absolute;
@@ -16,6 +31,13 @@
         height: 11.4rem;
         top: 7rem;
         right: -2.5rem;
+
+        @include mq.desktop {
+            position: fixed;
+            right: auto;
+            left: -14.5rem;
+            top: 9rem;
+        }
     }
 
     &__subtitle {
@@ -104,6 +126,10 @@
                 flex-direction: column;
                 justify-content: center;
 
+                @include mq.desktop {
+                    flex-grow: 2;
+                }
+
                 &--title {
                     padding-bottom: 1.2rem;
                     background-color: $white;
@@ -126,8 +152,52 @@
                 }
             }
         }
+    }
 
+    & .swiperMenuImages {
+        max-width: 100%;
+        height: fit-content;
+        padding-top: 12rem;
+        text-align: center;
 
+        @include mq.desktop {
+            display: none;
+        }
 
+        & img {
+            width: 33.5rem;
+            height: 33.5rem;
+            object-fit: cover;
+        }
+
+        &-pagination {
+            display: flex;
+            justify-content: center;
+            height: 0.8rem;
+            margin-top: 3.2rem;
+            color: $gold;
+
+            & .swiper-pagination-bullet-active {
+                background: $gold;
+            }
+        }
+    }
+
+    &__imagesDesktop {
+        padding-top: 12rem;
+
+        @include mq.nondesktop {
+            display: none;
+        }
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+
+        & img {
+            height: 25%;
+            width: 33%;
+        }
     }
 }

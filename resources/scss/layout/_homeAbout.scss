@@ -8,9 +8,11 @@
     @include mq.desktop {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: center;
-        margin: 15rem auto 10rem auto;
-        max-width: 60%;
+        justify-content: space-evenly;
+        margin: 15rem 0 10rem 0;
+        // padding-left: 15%;
+        max-width: 70%;
+        margin: auto;
     }
 
     &__info {
@@ -21,13 +23,14 @@
             flex-direction: column;
             flex: 1;
             padding-left: 7rem;
-            padding-right: 5%;
-            // padding-right: 5rem;
+            padding-right: 5rem;
             margin-top: 15rem;
+            z-index: -5;
+            // word-break: break-all;
+            // width: 50%;
         }
 
         &--subtitle {
-            width: fit-content;
             margin-top: 6rem;
             padding: 3rem 1rem 0 2rem;
             font-family: $archivo-font;
@@ -40,7 +43,6 @@
         }
 
         &--title {
-            width: fit-content;
             padding: 2.5rem 1rem 0 2rem;
             font-family: $standard-tt-font;
             font-style: normal;
@@ -52,7 +54,6 @@
         }
 
         &--paragraph {
-            width: fit-content;
             padding: 1.4rem 2rem 0 2rem;
             font-family: $archivo-font;
             font-style: normal;

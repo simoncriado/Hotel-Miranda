@@ -1,33 +1,26 @@
-// Setting the amount of slides visible in the screen based on the window´s width
-const responsiveSwiper = (screenWidth) => {
-  let numSlides = 0;
-  if (screenWidth > 1000) {
-    numSlides = 3;
-  } else {
-    numSlides = 1;
-  }
-  return new Swiper(".swiper", {
-    effect: "default",
-    direction: "horizontal",
-    loop: true,
-    slidesPerView: numSlides,
-    spaceBetween: 30,
-    autoplay: {
-      delay: 6000,
-    },
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-};
+window.addEventListener("scroll", () => {
+  console.log(document.body.scrollHeight);
+});
 
-// Creating a swiper based with the window´s width as a parameter
-let swiper = responsiveSwiper(window.innerWidth);
-
-window.addEventListener("resize", () => {
-  swiper = responsiveSwiper(innerWidth);
+const swiper = new Swiper(".swiper", {
+  effect: "default",
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 6000,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    1000: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 });
 
 const swiperFeatures = new Swiper(".swiperFeatures", {
@@ -50,10 +43,29 @@ const swiperMenu = new Swiper(".swiperMenu", {
   slidesPerView: "1",
   spaceBetween: 30,
   autoplay: {
-    delay: 4000,
+    delay: 6000,
   },
   navigation: {
     nextEl: ".swiperMenu-button-next",
     prevEl: ".swiperMenu-button-prev",
+  },
+  breakpoints: {
+    1000: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+  },
+});
+const swiperMenuImages = new Swiper(".swiperMenuImages", {
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: "1",
+  spaceBetween: 30,
+  autoplay: {
+    delay: 6000,
+  },
+  pagination: {
+    el: ".swiperMenuImages-pagination",
+    type: "bullets",
   },
 });
