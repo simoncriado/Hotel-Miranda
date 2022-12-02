@@ -100,7 +100,10 @@
             margin: 0 auto;
             top: -3.5rem;
             z-index: 10;
-            opacity: 0;
+
+            @include mq.desktop {
+                opacity: 0;
+            }
         }
 
         &--roomImg {
@@ -124,7 +127,10 @@
             line-height: 3.6rem;
             letter-spacing: -0.12rem;
             color: #222222;
-            opacity: 0;
+
+            @include mq.desktop {
+                opacity: 0;
+            }
         }
 
         &--description {
@@ -135,7 +141,10 @@
             font-size: 1.4rem;
             line-height: 2.4rem;
             color: $light-grey;
-            opacity: 0;
+
+            @include mq.desktop {
+                opacity: 0;
+            }
         }
 
         &--price {
@@ -146,13 +155,19 @@
             font-size: 3.2rem;
             line-height: 4.3rem;
             color: $gold;
-            opacity: 0;
+
+            @include mq.desktop {
+                opacity: 0;
+            }
 
             &--perNight {
                 font-weight: 400;
                 font-size: 1.5rem;
                 line-height: 2rem;
-                opacity: 0;
+
+                @include mq.desktop {
+                    opacity: 0;
+                }
             }
         }
     }

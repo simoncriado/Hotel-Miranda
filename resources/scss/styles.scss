@@ -1,5 +1,6 @@
 // Layout
 @import "layout/header";
+@import "layout/subheader";
 @import "layout/footer";
 @import "layout/homeTour";
 @import "layout/homeAvailability";
@@ -9,6 +10,11 @@
 @import "layout/homeFeatures";
 @import "layout/homeMenu";
 @import "layout/homeStats";
+@import "layout/aboutVideo";
+@import "layout/aboutRestaurant";
+@import "layout/aboutFeatures";
+@import "layout/aboutCounter";
+@import "layout/roomsList";
 
 // Components
 @import "components/buttons";

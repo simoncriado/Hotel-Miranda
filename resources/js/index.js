@@ -1,7 +1,3 @@
-window.addEventListener("scroll", () => {
-  console.log(document.body.scrollHeight);
-});
-
 const swiper = new Swiper(".swiper", {
   effect: "default",
   direction: "horizontal",
@@ -67,5 +63,18 @@ const swiperMenuImages = new Swiper(".swiperMenuImages", {
   pagination: {
     el: ".swiperMenuImages-pagination",
     type: "bullets",
+  },
+});
+const swiperRoomsList = new Swiper(".swiperRoomsList", {
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: "1",
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiperRoomsList-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
   },
 });
