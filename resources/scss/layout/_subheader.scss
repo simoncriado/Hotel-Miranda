@@ -47,11 +47,14 @@
         display: flex;
         justify-content: center;
         height: 5rem;
-        width: 16rem;
+        min-width: 16rem;
+        width: fit-content;
         background-color: $white;
 
         @include mq.desktop {
             right: 15%;
+            min-width: 16rem;
+            width: fit-content;
         }
 
         &__page {

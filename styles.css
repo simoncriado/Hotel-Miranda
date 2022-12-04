@@ -49,6 +49,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .nav {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
   height: 7rem;
@@ -255,12 +261,15 @@
   display: flex;
   justify-content: center;
   height: 5rem;
-  width: 16rem;
+  min-width: 16rem;
+  width: fit-content;
   background-color: #ffffff;
 }
 @media all and (min-width: 1000px) {
   .subheaderSection__navigation {
     right: 15%;
+    min-width: 16rem;
+    width: fit-content;
   }
 }
 .subheaderSection__navigation__page {
@@ -1862,7 +1871,7 @@
     height: 37rem;
     width: 37rem;
     flex-basis: 30%;
-    overflow: hidden;
+    overflow: scroll;
   }
 }
 .dark__container__slides__container {
@@ -1946,10 +1955,18 @@
 @media all and (min-width: 1000px) {
   .counterSection__container {
     display: inline-block;
+    padding-right: 5%;
   }
 }
 .counterSection__container__subContainer {
   justify-self: start;
+}
+@media all and (min-width: 1000px) {
+  .counterSection__container__subContainer {
+    display: inline-block;
+    padding-left: 1.8rem;
+    padding-right: 3rem;
+  }
 }
 .counterSection__container__subContainer__number {
   font-family: "Old Standard TT", serif;
@@ -1970,6 +1987,11 @@
 }
 .counterSection__container__arrow {
   justify-self: end;
+}
+@media all and (min-width: 1000px) {
+  .counterSection__container__arrow {
+    padding-bottom: 2rem;
+  }
 }
 .counterSection .swiperMenuImages {
   max-width: 100%;
@@ -2004,6 +2026,19 @@
   max-width: 100%;
   overflow: hidden;
   padding: 4.4rem 2rem 0 2rem;
+}
+@media all and (min-width: 1000px) {
+  .swiperRoomsList {
+    max-width: 80%;
+    margin: auto;
+    text-align: unset;
+  }
+}
+@media all and (min-width: 1000px) {
+  .swiperRoomsList-pagination {
+    left: auto;
+    margin: 0 auto;
+  }
 }
 .swiperRoomsList-pagination .swiper-pagination-bullet {
   height: 4rem;
@@ -2043,11 +2078,22 @@
   bottom: 22.5rem;
   z-index: 10;
 }
+@media all and (min-width: 1000px) {
+  .swiperRoomsList .roomSlider__slides--extras {
+    opacity: 1;
+  }
+}
 .swiperRoomsList .roomSlider__slides--roomImg {
   width: 100%;
   height: 25rem;
   object-fit: cover;
   max-width: 100%;
+}
+@media all and (min-width: 1000px) {
+  .swiperRoomsList .roomSlider__slides--roomImg {
+    max-width: 30%;
+    display: inline-block;
+  }
 }
 .swiperRoomsList .roomSlider__slides--title {
   position: relative;
@@ -2064,6 +2110,13 @@
   letter-spacing: -0.12rem;
   color: #222222;
 }
+@media all and (min-width: 1000px) {
+  .swiperRoomsList .roomSlider__slides--title {
+    opacity: 1;
+    display: inline-block;
+    width: 25%;
+  }
+}
 .swiperRoomsList .roomSlider__slides--description {
   padding: 1.6rem 5rem 2rem 5rem;
   font-family: "Roboto", sans-serif;
@@ -2072,6 +2125,13 @@
   font-size: 1.4rem;
   line-height: 2.4rem;
   color: #777777;
+}
+@media all and (min-width: 1000px) {
+  .swiperRoomsList .roomSlider__slides--description {
+    opacity: 1;
+    display: inline-block;
+    width: 25%;
+  }
 }
 .swiperRoomsList .roomSlider__slides__container {
   display: flex;
@@ -2108,6 +2168,123 @@
   color: #111111;
 }
 
+.roomSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4.8rem 2rem;
+}
+@media all and (min-width: 1000px) {
+  .roomSection {
+    max-width: 80%;
+    margin: auto;
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+.roomSection__subtitle {
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.28rem;
+  color: #777777;
+}
+.roomSection__title {
+  margin-top: 1.2rem;
+  font-family: "Old Standard TT", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: -0.144rem;
+  color: #222222;
+}
+.roomSection__price {
+  padding: 1.6rem 0;
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4.3rem;
+  color: #BEAD8E;
+}
+@media all and (min-width: 1000px) {
+  .roomSection__price {
+    opacity: 0;
+  }
+}
+.roomSection__price--perNight {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media all and (min-width: 1000px) {
+  .roomSection__price--perNight {
+    opacity: 0;
+  }
+}
+
+.singleRoomAvailabilitySection {
+  width: 90%;
+  margin: auto;
+}
+.singleRoomAvailabilitySection__subtitle {
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  letter-spacing: 0.054rem;
+  color: #222222;
+}
+.singleRoomAvailabilitySection__form {
+  width: 90%;
+  margin: auto;
+  padding-top: 3.5rem;
+}
+.singleRoomAvailabilitySection__form__block {
+  display: flex;
+  flex-direction: column;
+}
+.singleRoomAvailabilitySection__form__block label {
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  color: #222222;
+}
+.singleRoomAvailabilitySection__form__block input {
+  margin: 1.3rem 0 1.9rem 0;
+  padding: 2.4rem 2.7rem 2.1rem 2.9rem;
+  border-style: none;
+  background-color: #F8F8F8;
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  color: #777777;
+}
+.singleRoomAvailabilitySection__form__block input::-webkit-calendar-picker-indicator {
+  height: 2rem;
+  width: 2rem;
+  filter: invert(46%) sepia(0%) saturate(667%) hue-rotate(141deg) brightness(102%) contrast(91%);
+}
+.singleRoomAvailabilitySection__text {
+  padding-top: 4.8rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.054rem;
+  color: #777777;
+}
+
 .btn {
   border-style: none;
   height: 6rem;
@@ -2132,6 +2309,10 @@
     margin-left: 15rem;
     padding: 2.3rem 2.4rem;
   }
+}
+.btn--light {
+  width: 100%;
+  font-weight: 400;
 }
 
 * {

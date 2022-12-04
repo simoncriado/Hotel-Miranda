@@ -39,12 +39,20 @@
         flex-direction: row;
         justify-content: space-around;
 
+        //Meter inline blocks a todo esto!!
         @include mq.desktop {
             display: inline-block;
+            padding-right: 5%;
         }
 
         &__subContainer {
             justify-self: start;
+
+            @include mq.desktop {
+                display: inline-block;
+                padding-left: 1.8rem;
+                padding-right: 3rem;
+            }
 
             &__number {
                 font-family: $standard-tt-font;
@@ -68,6 +76,10 @@
 
         &__arrow {
             justify-self: end;
+
+            @include mq.desktop {
+                padding-bottom: 2rem;
+            }
         }
     }
 
