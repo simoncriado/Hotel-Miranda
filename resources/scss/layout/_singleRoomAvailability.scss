@@ -8,6 +8,12 @@
     width: 90%;
     margin: auto;
 
+    @include mq.desktop {
+        display: inline-block;
+        width: 20%;
+        position: relative;
+    }
+
     &__subtitle {
         text-align: center;
         font-family: $archivo-font;
@@ -17,12 +23,20 @@
         line-height: 2rem;
         letter-spacing: 0.054rem;
         color: $darker-grey;
+
+        @include mq.desktop {
+            display: inline-block;
+        }
     }
 
     &__form {
         width: 90%;
         margin: auto;
         padding-top: 3.5rem;
+
+        @include mq.desktop {
+            display: inline-block;
+        }
 
         &__block {
             display: flex;
@@ -67,5 +81,9 @@
         line-height: 2.4rem;
         letter-spacing: 0.054rem;
         color: $light-grey;
+
+        @include mq.desktop {
+            display: inline-block;
+        }
     }
 }

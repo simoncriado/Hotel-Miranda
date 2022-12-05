@@ -11,10 +11,11 @@
     margin: 4.8rem 2rem;
 
     @include mq.desktop {
-        max-width: 80%;
-        margin: auto;
-        flex-direction: row;
-        gap: 4rem;
+        width: 50%;
+        display: inline-block;
+        margin: 0 0 0 15%;
+        position: relative;
+        top: -100rem;
     }
 
     &__subtitle {
@@ -26,7 +27,10 @@
         letter-spacing: 0.28rem;
         color: $light-grey;
 
-        @include mq.desktop {}
+        @include mq.desktop {
+            padding-left: 4rem;
+            display: inline-block;
+        }
     }
 
     &__title {
@@ -38,6 +42,12 @@
         line-height: 4.8rem;
         letter-spacing: -0.144rem;
         color: $darker-grey;
+
+        @include mq.desktop {
+            padding-left: 4rem;
+            padding-right: 5rem;
+            display: inline-block;
+        }
     }
 
     &__price {
@@ -50,7 +60,7 @@
         color: $gold;
 
         @include mq.desktop {
-            opacity: 0;
+            display: inline-block;
         }
 
         &--perNight {
@@ -58,9 +68,16 @@
             font-size: 1.5rem;
             line-height: 2rem;
 
-            @include mq.desktop {
-                opacity: 0;
-            }
+            @include mq.desktop {}
+        }
+    }
+
+    & img {
+        @include mq.desktop {
+            position: absolute;
+            left: 0;
+            z-index: -1;
+            top: 9rem;
         }
     }
 }

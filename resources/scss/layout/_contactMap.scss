@@ -1,0 +1,14 @@
+@use "../core/mediaQueries" as mq;
+
+@import "../abstracts/variables";
+@import "../core/typography";
+
+// MAP SECTION STYLES
+.mapSection {
+    width: 90%;
+    margin: auto;
+
+    &__img {
+        width: 100%;
+    }
+}
