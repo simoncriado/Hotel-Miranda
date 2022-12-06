@@ -541,6 +541,7 @@
     background-color: #222222;
     height: 6.5rem;
     padding: 0.5rem 0 0 15%;
+    width: 100%;
   }
 }
 .tourSection__container--subtitle {
@@ -1467,6 +1468,14 @@
   font-weight: 300;
   cursor: pointer;
 }
+@media all and (min-width: 1000px) {
+  .menuSection__slides-button-prev, .menuSection__slides-button-next,
+.menuSection .swiperMenu-button-prev,
+.menuSection .swiperMenu-button-next {
+    bottom: auto;
+    top: -5rem;
+  }
+}
 .menuSection__slides-button-prev:after, .menuSection__slides-button-next:after,
 .menuSection .swiperMenu-button-prev:after,
 .menuSection .swiperMenu-button-next:after {
@@ -1492,16 +1501,76 @@
 .menuSection .swiperMenu__part3 {
   display: flex;
   flex-direction: row;
-  height: 12rem;
-  gap: 3rem;
   margin-bottom: 1.6rem;
+}
+@media all and (min-width: 1000px) {
+  .menuSection__slides__part1:hover, .menuSection__slides__part2:hover, .menuSection__slides__part3:hover,
+.menuSection .swiperMenu__part1:hover,
+.menuSection .swiperMenu__part2:hover,
+.menuSection .swiperMenu__part3:hover {
+    background-color: #222222;
+  }
+}
+.menuSection__slides__part1:hover .menuSection__slides__part1__container2--title,
+.menuSection__slides__part1:hover .menuSection__slides__part1__container2--description,
+.menuSection__slides__part1:hover .menuSection__slides__part2__container2--title,
+.menuSection__slides__part1:hover .menuSection__slides__part2__container2--description,
+.menuSection__slides__part1:hover .menuSection__slides__part3__container2--title,
+.menuSection__slides__part1:hover .menuSection__slides__part3__container2--description, .menuSection__slides__part2:hover .menuSection__slides__part1__container2--title,
+.menuSection__slides__part2:hover .menuSection__slides__part1__container2--description,
+.menuSection__slides__part2:hover .menuSection__slides__part2__container2--title,
+.menuSection__slides__part2:hover .menuSection__slides__part2__container2--description,
+.menuSection__slides__part2:hover .menuSection__slides__part3__container2--title,
+.menuSection__slides__part2:hover .menuSection__slides__part3__container2--description, .menuSection__slides__part3:hover .menuSection__slides__part1__container2--title,
+.menuSection__slides__part3:hover .menuSection__slides__part1__container2--description,
+.menuSection__slides__part3:hover .menuSection__slides__part2__container2--title,
+.menuSection__slides__part3:hover .menuSection__slides__part2__container2--description,
+.menuSection__slides__part3:hover .menuSection__slides__part3__container2--title,
+.menuSection__slides__part3:hover .menuSection__slides__part3__container2--description,
+.menuSection .swiperMenu__part1:hover .menuSection__slides__part1__container2--title,
+.menuSection .swiperMenu__part1:hover .menuSection__slides__part1__container2--description,
+.menuSection .swiperMenu__part1:hover .menuSection__slides__part2__container2--title,
+.menuSection .swiperMenu__part1:hover .menuSection__slides__part2__container2--description,
+.menuSection .swiperMenu__part1:hover .menuSection__slides__part3__container2--title,
+.menuSection .swiperMenu__part1:hover .menuSection__slides__part3__container2--description,
+.menuSection .swiperMenu__part2:hover .menuSection__slides__part1__container2--title,
+.menuSection .swiperMenu__part2:hover .menuSection__slides__part1__container2--description,
+.menuSection .swiperMenu__part2:hover .menuSection__slides__part2__container2--title,
+.menuSection .swiperMenu__part2:hover .menuSection__slides__part2__container2--description,
+.menuSection .swiperMenu__part2:hover .menuSection__slides__part3__container2--title,
+.menuSection .swiperMenu__part2:hover .menuSection__slides__part3__container2--description,
+.menuSection .swiperMenu__part3:hover .menuSection__slides__part1__container2--title,
+.menuSection .swiperMenu__part3:hover .menuSection__slides__part1__container2--description,
+.menuSection .swiperMenu__part3:hover .menuSection__slides__part2__container2--title,
+.menuSection .swiperMenu__part3:hover .menuSection__slides__part2__container2--description,
+.menuSection .swiperMenu__part3:hover .menuSection__slides__part3__container2--title,
+.menuSection .swiperMenu__part3:hover .menuSection__slides__part3__container2--description {
+  color: #ffffff;
+}
+.menuSection__slides__part1:hover .menuSection__slides__part1--arrow,
+.menuSection__slides__part1:hover .menuSection__slides__part2--arrow,
+.menuSection__slides__part1:hover .menuSection__slides__part3--arrow, .menuSection__slides__part2:hover .menuSection__slides__part1--arrow,
+.menuSection__slides__part2:hover .menuSection__slides__part2--arrow,
+.menuSection__slides__part2:hover .menuSection__slides__part3--arrow, .menuSection__slides__part3:hover .menuSection__slides__part1--arrow,
+.menuSection__slides__part3:hover .menuSection__slides__part2--arrow,
+.menuSection__slides__part3:hover .menuSection__slides__part3--arrow,
+.menuSection .swiperMenu__part1:hover .menuSection__slides__part1--arrow,
+.menuSection .swiperMenu__part1:hover .menuSection__slides__part2--arrow,
+.menuSection .swiperMenu__part1:hover .menuSection__slides__part3--arrow,
+.menuSection .swiperMenu__part2:hover .menuSection__slides__part1--arrow,
+.menuSection .swiperMenu__part2:hover .menuSection__slides__part2--arrow,
+.menuSection .swiperMenu__part2:hover .menuSection__slides__part3--arrow,
+.menuSection .swiperMenu__part3:hover .menuSection__slides__part1--arrow,
+.menuSection .swiperMenu__part3:hover .menuSection__slides__part2--arrow,
+.menuSection .swiperMenu__part3:hover .menuSection__slides__part3--arrow {
+  display: block;
 }
 .menuSection__slides__part1__container--icon, .menuSection__slides__part2__container--icon, .menuSection__slides__part3__container--icon,
 .menuSection .swiperMenu__part1__container--icon,
 .menuSection .swiperMenu__part2__container--icon,
 .menuSection .swiperMenu__part3__container--icon {
   width: 12rem;
-  height: 12rem;
+  height: 100%;
   object-fit: cover;
 }
 .menuSection__slides__part1__container2, .menuSection__slides__part2__container2, .menuSection__slides__part3__container2,
@@ -1511,6 +1580,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 3rem;
 }
 @media all and (min-width: 1000px) {
   .menuSection__slides__part1__container2, .menuSection__slides__part2__container2, .menuSection__slides__part3__container2,
@@ -1518,6 +1588,8 @@
 .menuSection .swiperMenu__part2__container2,
 .menuSection .swiperMenu__part3__container2 {
     flex-grow: 2;
+    overflow: scroll;
+    padding: 1rem 0 1rem 3rem;
   }
 }
 .menuSection__slides__part1__container2--title, .menuSection__slides__part2__container2--title, .menuSection__slides__part3__container2--title,
@@ -1525,7 +1597,6 @@
 .menuSection .swiperMenu__part2__container2--title,
 .menuSection .swiperMenu__part3__container2--title {
   padding-bottom: 1.2rem;
-  background-color: #ffffff;
   font-family: "Old Standard TT", serif;
   font-style: normal;
   font-weight: 400;
@@ -1544,6 +1615,17 @@
   font-size: 1.4rem;
   line-height: 2.4rem;
   color: #777777;
+}
+.menuSection__slides__part1--arrow, .menuSection__slides__part2--arrow, .menuSection__slides__part3--arrow,
+.menuSection .swiperMenu__part1--arrow,
+.menuSection .swiperMenu__part2--arrow,
+.menuSection .swiperMenu__part3--arrow {
+  display: none;
+  width: 3rem;
+  height: 1.5rem;
+  align-self: center;
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 .menuSection .swiperMenuImages {
   max-width: 100%;
