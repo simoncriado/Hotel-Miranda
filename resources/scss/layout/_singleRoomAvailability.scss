@@ -9,9 +9,11 @@
     margin: auto;
 
     @include mq.desktop {
+        width: 30%;
         display: inline-block;
-        width: 20%;
-        position: relative;
+        margin-right: 10%;
+        vertical-align: top;
+        margin-top: 15rem;
     }
 
     &__subtitle {
@@ -23,20 +25,12 @@
         line-height: 2rem;
         letter-spacing: 0.054rem;
         color: $darker-grey;
-
-        @include mq.desktop {
-            display: inline-block;
-        }
     }
 
     &__form {
         width: 90%;
         margin: auto;
         padding-top: 3.5rem;
-
-        @include mq.desktop {
-            display: inline-block;
-        }
 
         &__block {
             display: flex;
@@ -83,7 +77,7 @@
         color: $light-grey;
 
         @include mq.desktop {
-            display: inline-block;
+            display: none;
         }
     }
 }
