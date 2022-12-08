@@ -1510,8 +1510,7 @@
 .menuSection .swiperMenu__part3:hover {
     background-color: #222222;
   }
-}
-.menuSection__slides__part1:hover .menuSection__slides__part1__container2--title,
+  .menuSection__slides__part1:hover .menuSection__slides__part1__container2--title,
 .menuSection__slides__part1:hover .menuSection__slides__part1__container2--description,
 .menuSection__slides__part1:hover .menuSection__slides__part2__container2--title,
 .menuSection__slides__part1:hover .menuSection__slides__part2__container2--description,
@@ -1545,9 +1544,9 @@
 .menuSection .swiperMenu__part3:hover .menuSection__slides__part2__container2--description,
 .menuSection .swiperMenu__part3:hover .menuSection__slides__part3__container2--title,
 .menuSection .swiperMenu__part3:hover .menuSection__slides__part3__container2--description {
-  color: #ffffff;
-}
-.menuSection__slides__part1:hover .menuSection__slides__part1--arrow,
+    color: #ffffff;
+  }
+  .menuSection__slides__part1:hover .menuSection__slides__part1--arrow,
 .menuSection__slides__part1:hover .menuSection__slides__part2--arrow,
 .menuSection__slides__part1:hover .menuSection__slides__part3--arrow, .menuSection__slides__part2:hover .menuSection__slides__part1--arrow,
 .menuSection__slides__part2:hover .menuSection__slides__part2--arrow,
@@ -1563,7 +1562,8 @@
 .menuSection .swiperMenu__part3:hover .menuSection__slides__part1--arrow,
 .menuSection .swiperMenu__part3:hover .menuSection__slides__part2--arrow,
 .menuSection .swiperMenu__part3:hover .menuSection__slides__part3--arrow {
-  display: block;
+    display: block;
+  }
 }
 .menuSection__slides__part1__container--icon, .menuSection__slides__part2__container--icon, .menuSection__slides__part3__container--icon,
 .menuSection .swiperMenu__part1__container--icon,
@@ -1588,7 +1588,6 @@
 .menuSection .swiperMenu__part2__container2,
 .menuSection .swiperMenu__part3__container2 {
     flex-grow: 2;
-    overflow: scroll;
     padding: 1rem 0 1rem 3rem;
   }
 }
@@ -1792,8 +1791,8 @@
   filter: brightness(2);
 }
 .aboutVideoSection__container__service__icon {
-  height: 5rem;
-  width: 5rem;
+  height: 4.5rem;
+  width: 4.5rem;
   filter: invert(0.45) sepia(1);
 }
 .aboutVideoSection__container__service--hide {
@@ -2553,6 +2552,19 @@
 }
 .employeeSection__container__imgContainer {
   position: relative;
+  width: 100%;
+  margin: unset;
+}
+@media screen and (min-width: 641px) and (max-width: 999px) {
+  .employeeSection__container__imgContainer {
+    width: 30%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 1000px) {
+  .employeeSection__container__imgContainer {
+    width: 100%;
+  }
 }
 .employeeSection__container__imgContainer__portrait {
   width: 15rem;
@@ -2568,7 +2580,7 @@
   border-radius: 50%;
   text-align: center;
   top: 0;
-  left: 60%;
+  left: 65%;
 }
 .employeeSection__container__imgContainer__checkContainer__check {
   padding-top: 1rem;
@@ -2694,8 +2706,8 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: auto;
-  bottom: 22.5rem;
+  top: 22.5rem;
+  bottom: auto;
   z-index: 10;
 }
 @media all and (min-width: 1000px) {
@@ -2912,7 +2924,7 @@
 .offerRoomSection__room__priceContainer {
   position: absolute;
   padding-right: 1.5rem;
-  top: 12.5rem;
+  top: 2.5rem;
   right: 0;
   width: 14.5rem;
   text-align: right;
@@ -2964,7 +2976,7 @@
 .offerRoomSection__room__img {
   width: 100%;
   min-height: 17rem;
-  height: 20rem;
+  height: fit-content;
 }
 @media all and (min-width: 1000px) {
   .offerRoomSection__room__img {
@@ -3410,6 +3422,14 @@
   flex-direction: column;
   gap: 4.7rem;
 }
+@media all and (min-width: 1000px) {
+  .contactDetailsSection {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 80%;
+  }
+}
 .contactDetailsSection__container {
   position: relative;
   display: flex;
@@ -3417,6 +3437,11 @@
   gap: 2.7rem;
   width: 100%;
   height: 19rem;
+}
+@media all and (min-width: 1000px) {
+  .contactDetailsSection__container {
+    width: 30%;
+  }
 }
 .contactDetailsSection__container__img {
   width: 4rem;
@@ -3464,6 +3489,11 @@
   width: 90%;
   margin: auto;
 }
+@media all and (min-width: 1000px) {
+  .mapSection {
+    width: 80%;
+  }
+}
 .mapSection__img {
   width: 100%;
 }
@@ -3478,11 +3508,26 @@
   flex-wrap: wrap;
   gap: 1.6rem;
 }
+@media all and (min-width: 1000px) {
+  .contactFormSection div:nth-child(3) {
+    width: 91.5%;
+  }
+}
+@media all and (min-width: 1000px) {
+  .contactFormSection {
+    width: 80%;
+  }
+}
 .contactFormSection__firstContainer {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
   width: 100%;
+}
+@media all and (min-width: 1000px) {
+  .contactFormSection__firstContainer {
+    width: 45%;
+  }
 }
 .contactFormSection__firstContainer__input {
   position: relative;
@@ -3509,6 +3554,11 @@
 .contactFormSection button {
   width: 80%;
   margin-top: 2rem;
+}
+@media all and (min-width: 1000px) {
+  .contactFormSection button {
+    width: 20%;
+  }
 }
 
 .btn {

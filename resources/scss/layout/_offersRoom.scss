@@ -24,7 +24,7 @@
         &__priceContainer {
             position: absolute;
             padding-right: 1.5rem;
-            top: 12.5rem;
+            top: 2.5rem;
             right: 0;
             width: 14.5rem;
             text-align: right;
@@ -81,7 +81,7 @@
         &__img {
             width: 100%;
             min-height: 17rem;
-            height: 20rem;
+            height: fit-content;
 
             @include mq.desktop {
                 z-index: -1;

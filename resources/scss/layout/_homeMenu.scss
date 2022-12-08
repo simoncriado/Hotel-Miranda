@@ -120,22 +120,23 @@
             &:hover {
                 @include mq.desktop {
                     background-color: $darker-grey;
+
+                    .menuSection__slides__part1__container2--title,
+                    .menuSection__slides__part1__container2--description,
+                    .menuSection__slides__part2__container2--title,
+                    .menuSection__slides__part2__container2--description,
+                    .menuSection__slides__part3__container2--title,
+                    .menuSection__slides__part3__container2--description {
+                        color: $white;
+                    }
+
+                    .menuSection__slides__part1--arrow,
+                    .menuSection__slides__part2--arrow,
+                    .menuSection__slides__part3--arrow {
+                        display: block;
+                    }
                 }
 
-                .menuSection__slides__part1__container2--title,
-                .menuSection__slides__part1__container2--description,
-                .menuSection__slides__part2__container2--title,
-                .menuSection__slides__part2__container2--description,
-                .menuSection__slides__part3__container2--title,
-                .menuSection__slides__part3__container2--description {
-                    color: $white;
-                }
-
-                .menuSection__slides__part1--arrow,
-                .menuSection__slides__part2--arrow,
-                .menuSection__slides__part3--arrow {
-                    display: block;
-                }
             }
 
             &__container {
@@ -154,7 +155,6 @@
 
                 @include mq.desktop {
                     flex-grow: 2;
-                    overflow: scroll;
                     padding: 1rem 0 1rem 3rem;
                 }
 

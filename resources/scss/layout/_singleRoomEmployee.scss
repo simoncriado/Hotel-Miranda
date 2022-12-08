@@ -21,6 +21,17 @@
 
         &__imgContainer {
             position: relative;
+            width: 100%;
+            margin: unset;
+
+            @include mq.tablet {
+                width: 30%;
+                margin: auto;
+            }
+
+            @include mq.desktop {
+                width: 100%;
+            }
 
             &__portrait {
                 width: 15rem;
@@ -37,7 +48,7 @@
                 border-radius: 50%;
                 text-align: center;
                 top: 0;
-                left: 60%;
+                left: 65%;
 
                 &__check {
                     padding-top: 1rem;
