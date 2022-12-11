@@ -601,6 +601,7 @@
   line-height: 1.5rem;
   letter-spacing: 0.28rem;
   color: #ffffff;
+  cursor: pointer;
 }
 .tourSection__container__buttons--learn {
   border: 2px solid rgba(255, 255, 255, 0.33);
@@ -615,6 +616,7 @@
   line-height: 1.5rem;
   letter-spacing: 0.28rem;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .availabilitySection {
@@ -716,6 +718,7 @@
   line-height: 1.5rem;
   letter-spacing: 0.28rem;
   color: #ffffff;
+  cursor: pointer;
 }
 @media all and (min-width: 1000px) {
   .availabilitySection__container__button {
@@ -793,6 +796,7 @@
   line-height: 1.5rem;
   letter-spacing: 0.28rem;
   color: #ffffff;
+  cursor: pointer;
 }
 @media all and (min-width: 1000px) {
   .aboutSection__cards {
@@ -1222,6 +1226,7 @@
   line-height: 1.5rem;
   letter-spacing: 0.28rem;
   color: #ffffff;
+  cursor: pointer;
 }
 @media all and (min-width: 1000px) {
   .videoSection__button {
@@ -3574,6 +3579,7 @@
   line-height: 1.5rem;
   letter-spacing: 0.28rem;
   color: #ffffff;
+  cursor: pointer;
 }
 .btn--large {
   border-style: none;
