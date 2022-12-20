@@ -3503,6 +3503,11 @@
   width: 100%;
 }
 
+#map {
+  height: 60%;
+  width: 100%;
+}
+
 .contactFormSection {
   width: 90%;
   margin: auto;

@@ -136,11 +136,36 @@
       </section>
       <!-- Map Section -->
       <section class="mapSection">
-        <img
-          src="./resources/assets/images/maps.jpg"
-          alt="Map image"
-          class="mapSection__img"
-        />
+        <input type="text" class="address" placeholder="Location" />
+        <button class="button-find-location">Find location</button>
+
+        <select class="regions">
+          <option value="Spain">Spain</option>
+          <option value="0">Andalucía</option>
+          <option value="1">Aragón</option>
+          <option value="2">Asturias, Principado de</option>
+          <option value="3">Balears, Illes</option>
+          <option value="4">Canarias</option>
+          <option value="5">Cantabria</option>
+          <option value="6">Castilla y León</option>
+          <option value="7">Castilla - La Mancha</option>
+          <option value="8">Cataluña / Catalunya</option>
+          <option value="9">Comunitat Valenciana</option>
+          <option value="10">Extremadura</option>
+          <option value="11">Galicia</option>
+          <option value="12">Madrid, Comunidad de</option>
+          <option value="13">Murcia, Región de</option>
+          <option value="14">Navarra, Comunidad Foral de</option>
+          <option value="15">País Vasco / Euskadi</option>
+          <option value="16">Rioja, La</option>
+          <option value="17">Ceuta</option>
+          <option value="18">Melilla</option>
+        </select>
+
+        <button class="button-map button-location">Find my location</button>
+        <button class="button-map button-matrix">Get hotels distance</button>
+        <div id="map"></div>
+        <div class="location-list"></div>
       </section>
       <!-- Contact Form Section -->
       <section class="contactFormSection">
@@ -420,8 +445,16 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZxv43jCV8VV1CaRUj8vQinRXA1ZIi0Ig&callback=initMap"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="module" src="./resources/js/index.js"></script>
     <script type="module" src="./resources/js/mobile-menu.js"></script>
+    <script src="./resources/js/maps.js"></script>
   </body>
 </html>
