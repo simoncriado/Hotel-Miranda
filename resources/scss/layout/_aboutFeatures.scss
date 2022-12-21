@@ -73,10 +73,10 @@
 
             @include mq.desktop {
                 background-color: #292929;
-                height: 37rem;
+                height: fit-content;
+                padding-bottom: 2rem;
                 width: 37rem;
                 flex-basis: 30%;
-                overflow: scroll;
             }
 
             &__container {

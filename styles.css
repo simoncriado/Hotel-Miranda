@@ -1981,10 +1981,10 @@
 @media all and (min-width: 1000px) {
   .dark__container__slides {
     background-color: #292929;
-    height: 37rem;
+    height: fit-content;
+    padding-bottom: 2rem;
     width: 37rem;
     flex-basis: 30%;
-    overflow: scroll;
   }
 }
 .dark__container__slides__container {
@@ -3499,8 +3499,67 @@
     width: 80%;
   }
 }
-.mapSection__img {
+.mapSection__address {
+  border: none;
+  background-color: #f8f8f8;
+  width: 50%;
+  padding: 2.3rem 5.2rem 2.3rem 3rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+.mapSection .regions {
+  margin-left: 1rem;
+  padding: 1.5rem 0.5rem;
+  width: 15%;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.mapSection .button-map {
+  border-style: none;
+  height: 4rem;
+  width: fit-content;
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  border-radius: 2px;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: 0.28rem;
+  color: #222222;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.mapSection .button-map:hover {
+  background-color: #BEAD8E;
+  opacity: 0.9;
+}
+.mapSection .location-table {
   width: 100%;
+  margin-top: 3rem;
+  font-family: "Roboto", sans-serif;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  color: #222222;
+}
+.mapSection .location-table th {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: start;
+  padding: 2.2rem 2.2rem 2.2rem 0;
+}
+.mapSection .location-table tr {
+  border-bottom: 1px solid #d4d4d4;
+  transition: background-color 0.3s;
+  padding: 2rem;
+}
+.mapSection .location-table tr:hover {
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.0784313725);
+}
+.mapSection .location-table tr td {
+  padding: 1rem 2.2rem 1rem 0;
 }
 
 #map {
@@ -3585,6 +3644,10 @@
   letter-spacing: 0.28rem;
   color: #ffffff;
   cursor: pointer;
+  transition: opacity 0.3s;
+}
+.btn:hover {
+  opacity: 0.8;
 }
 .btn--large {
   border-style: none;
