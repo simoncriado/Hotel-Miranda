@@ -12421,7 +12421,6 @@ const regionsSpain = [
     ],
   ],
 ];
-
 const hotels = [
   {
     lat: 39.44576,
@@ -12577,7 +12576,7 @@ const barcelona = {
   lng: 2.168002063018127,
 };
 
-// Initiates the map
+// Initiates the map with center in Barcelona
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 5,
@@ -12586,6 +12585,7 @@ function initMap() {
 
   currentHotels = hotels;
 
+  // Creates the marker that will be used to mark the hotels in the map
   svgMarker.anchor = new google.maps.Point(15, 30);
 
   // Creates a polygon for all regions in Spain
@@ -12615,18 +12615,21 @@ function initMap() {
   infoWindow = new google.maps.InfoWindow();
   cluster = new markerClusterer.MarkerClusterer({ map, markers });
 
+  // Dropdown for selecting any region of Spain
   const regionsSelect = document.querySelector(".regions");
   map.controls[google.maps.ControlPosition.LEFT_TOP].push(regionsSelect);
   regionsSelect.addEventListener("change", (e) => {
     getRegionBorder(borderRegion, e.target.value);
   });
 
+  // Gets user´s current position
   const locationButton = document.querySelector(".button-location");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
   locationButton.addEventListener("click", () => {
     getMyPosition(map);
   });
 
+  // Gets the distance from the user´s position to all hotels
   const matrixButton = document.querySelector(".button-matrix");
   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(matrixButton);
   matrixButton.addEventListener("click", () => {
@@ -12649,7 +12652,7 @@ function getMyPosition(map) {
           lng: position.coords.longitude,
         };
         infoWindow.setPosition(currentPosition);
-        infoWindow.setContent("Current location");
+        infoWindow.setContent("Your current location");
         infoWindow.open(map);
         map.setCenter(currentPosition);
         map.setZoom(10);
@@ -12663,7 +12666,7 @@ function getMyPosition(map) {
   }
 }
 
-// Geocodes the given location and displays it on the map
+// Geocodes the searched location and displays it on the map
 function codeAddress(geocoder, map, hotels) {
   let address = document.querySelector(".address").value;
   let service = new google.maps.DistanceMatrixService();
