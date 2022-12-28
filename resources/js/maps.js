@@ -12692,7 +12692,6 @@ function getDistanceMatrix(currentPosition) {
       {
         origins: [currentPosition],
         destinations: currentHotels,
-        travelMode: "DRIVING",
       },
       printDistanceList
     );
@@ -12723,7 +12722,7 @@ function printDistanceList(response, status) {
   const trTitle = document.createElement("tr");
   thead.appendChild(trTitle);
 
-  const titles = ["Destination", "Distance", "Duration"];
+  const titles = ["Hotel Address", "Distance"];
 
   titles.forEach((title) => {
     const th = document.createElement("th");
@@ -12744,10 +12743,6 @@ function printDistanceList(response, status) {
     const tdDistance = document.createElement("td");
     tdDistance.innerText = `${Math.round(hotel.distance / 1000)} km`;
     trdata.appendChild(tdDistance);
-
-    const tdDuration = document.createElement("td");
-    tdDuration.innerText = hotel.duration;
-    trdata.appendChild(tdDuration);
   });
 }
 
